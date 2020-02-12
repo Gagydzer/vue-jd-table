@@ -264,13 +264,12 @@
 								<!-- List Items -->
 								<span v-if="column.type === 'Array'">
 									<ul class="jd-list">
-										<li v-for="item in row.data[column.name]">
-											{{ item }}
+										<li v-for="item in row.data[column.name]" v-html="item">
 										</li>
 									</ul>
 								</span>
 								<!-- String Items -->
-								<span v-else>{{ row.data[column.name] }}</span>
+								<span v-else v-html="row.data[column.name]"></span>
 							</div>
 						</div>
 					</div>
@@ -446,8 +445,7 @@
 							<!-- List Items -->
 							<div v-if="column.type === 'Array'" class="jd-rowData">
 								<ul>
-									<li v-for="item in data[row.selectedIndex][column.name]">
-										{{ item }}
+									<li v-for="item in data[row.selectedIndex][column.name]" v-html="item">
 									</li>
 								</ul>
 							</div>
@@ -5044,5 +5042,3 @@
 		}
 	}
 </script>
-
-<style scoped lang="scss"></style>
