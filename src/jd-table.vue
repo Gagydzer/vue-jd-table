@@ -57,7 +57,7 @@
 				</span>
 
 				<!-- Feature: Filter -->
-				<span v-if="setting.filter" @click="$emit('toggle-filter', $event.target)" class="jd-controlItem" :class="controlFilterClasses">
+				<span v-if="setting.filter" @click="$emit('toggle-filter', $event.target)" class="jd-controlItem" :class="{ 'jd-selected': filterIsOpened, 'jd-active': filterIsActive}">
 					<i class="fas fa-filter" title="Filter"></i>
 
 					<!-- Control: Get Started with Filter Reminder -->
@@ -1027,6 +1027,10 @@
 			{
 				type    : Boolean,
 				default : true
+			},
+
+			filterIsOpened: Boolean,
+			filterIsActive: Boolean
 			}
 		},
 
