@@ -4087,6 +4087,8 @@
 			// Called when user single (left) clicks on a data row. Accepts the index of the data on the this.data.
 			rowActionSingle : function ( rowIndex )
 			{
+				this.$emit('row-click',this.processedData[rowIndex]);
+
 				if ( this.setting.quickView === 1 && !this.setting.contextMenuLeft )
 				{
 					// If the menu is visible already ..
