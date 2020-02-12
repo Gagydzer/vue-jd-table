@@ -1031,7 +1031,6 @@
 
 			filterIsOpened: Boolean,
 			filterIsActive: Boolean
-			}
 		},
 
 		created : function ()
