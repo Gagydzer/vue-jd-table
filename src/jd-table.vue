@@ -452,7 +452,7 @@
 								</ul>
 							</div>
 							<!-- String Items -->
-							<div v-else class="jd-rowData">{{ data[row.selectedIndex][column.name] }}</div>
+							<div v-else class="jd-rowData" v-html="data[row.selectedIndex][column.name]"></div>
 
 						</div>
 					</div>
